@@ -38,7 +38,7 @@ Atualizar item do estoque
 
 ### :computer: Processo de submissão
  
- desafio deve ser entregue pelo Discord da The Order OF The Boar.
+desafio deve ser entregue pelo Discord da The Order OF The Boar.
 
 Qualquer dúvida em relação ao desafio, responderemos no canal programming.
 
