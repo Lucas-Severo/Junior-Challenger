@@ -36,11 +36,6 @@ Se aparece que esta chovendo na cidade, mostre pokemons do tipo eletrico
 Não deixe que os pokemons (IMG) se repitão
 
 `Qualquer linguagem serve`
-### Relevante
-Caso você queira ganhar mais pontos, se seu background mudar de acordo com o clima você tera um diferencial,
-
-Não e necessario um front end bonito (Pagina simples)
-
 
 ### :computer: Processo de submissão
  
