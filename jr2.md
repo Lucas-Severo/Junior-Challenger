@@ -35,11 +35,6 @@ Atualizar item do estoque
 6. 'vender item' :  na opção de vender você deve fornecer o nome do item e a quantidade então ele sera removido do estoque, e voltará a tela inicial 
 
 `Qualquer linguagem serve`
-### Relevante
-Caso você queira ganhar mais pontos, se seu background mudar de acordo com o clima você tera um diferencial,
-
-Não e necessario um front end bonito (Pagina simples)
-
 
 ### :computer: Processo de submissão
  
