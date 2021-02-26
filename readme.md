@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="./img/logo.png" alt="php" width="120">
 </h1>
-<p align="center">Desafio Board</p>
+<p align="center">Desafio Boar</p>
 
 
 ## Autor
