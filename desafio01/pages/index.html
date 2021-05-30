@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Consultar temperatura</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Consultar temperatura</h1>
+        <form class="formulario">
+            <div>
+                <label for="cidade">Cidade</label>
+                <input type="label" id="cidade"/>
+            </div>
+            <button class="btn-submit" type="submit">Procurar</button>
+        </form>
+        <div class="pokemon-container">
+            
+        </div>
+    </header>
+    <script >
+        document.querySelector(".btn-submit").addEventListener("click", async function(event){
+            event.preventDefault()
+            const cidade = document.querySelector('#cidade').value
+            const temperatura = await obterTemperatura(cidade)
+            setImageByTemperatura(temperatura)
+        })
+
+        async function obterTemperatura(cidade) {
+            return await (await fetch(`/temperatura/${cidade}`)).json()
+        }
+
+        async function setImageByTemperatura(temperatura) {
+            const {url, name} = await (await fetch(`/pokemon`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(temperatura)
+            })).json()
+
+            let imageElement = document.querySelector('.pokemon-image')
+            let pokemonNameElement = document.querySelector('.pokemon-name')
+            if(!imageElement) {
+                imageElement = document.createElement('img')
+                imageElement.className = "pokemon-image"
+                imageElement.src = url
+
+                pokemonNameElement = document.createElement('p')
+                pokemonNameElement.className = 'pokemon-name'
+                pokemonNameElement.textContent = name
+
+                const container = document.querySelector('.pokemon-container')
+                container.appendChild(imageElement)
+                container.appendChild(pokemonNameElement)
+            }
+
+            imageElement.src = url
+            pokemonNameElement.textContent = name
+            
+        }
+    </script>
+</body>
+</html>
